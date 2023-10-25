@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+
+
+ <table border=1>
+     <tr>
+         <td>Lorem.</td>
+         <td>Praesentium!</td>
+         <td>Facilis!</td>
+         <td>Nulla!</td>
+         <td>Cum.</td>
+     </tr>
+     <tr>
+         <td>Lorem.</td>
+         <td>Magni!</td>
+         <td>Nam.</td>
+         <td>A!</td>
+         <td>Mollitia!</td>
+     </tr>
+     <tr>
+         <td>Lorem.</td>
+         <td>Vitae.</td>
+         <td>Laudantium?</td>
+         <td>In?</td>
+         <td>Repudiandae!</td>
+     </tr>
+     <tr>
+         <td>Lorem.</td>
+         <td>Sunt?</td>
+         <td>Neque.</td>
+         <td>Aliquid?</td>
+         <td>Iste.</td>
+     </tr>
+     <tr>
+         <td>Lorem.</td>
+         <td>Debitis!</td>
+         <td>Odio?</td>
+         <td>Nesciunt?</td>
+         <td>Esse.</td>
+     </tr>
+ </table>
+
+    <script>
+      let n = document.querySelector("table").rows.length
+          console.log(n);
+      for (let i = 0; i< n; i++){
+          let cl = document.querySelector("table").rows[i].cells[i].style.background = "green"
+      }
+
+</script>
+      <ol id="elem">
+          <li>привет</li>
+          <li>мир</li>
+      </ol>
+
+ <script>
+     function clear(elem){
+         elem.innerHTML = '';
+     }
+     clear(document.getElementById("elem"));
+     clear(document.querySelector("table"));
+
+ </script>
+
+<h2>календарь</h2>
+<div> id="calend">
+
+</div>
+<script>
+    let newDate = new Date(2023,5,1)
+   let year = newDate.getFullYear();
+    let  month = newDate.getMonth();
+    let day = newDate.getDay();
+                                         //console.log(newDate); \\===========проверка======
+    console.log(year, month, day);
+
+
+
+    let tbl = document.createElement('table')
+    tbl.setAttribute('border', 1)
+    tbl.innerHTML = '<tr><th>пн</th>вт</th> <th>ср</th> </th>чт</th> <th>пт</th> </th>сб</th> <th>вс</th></tr><tr>';
+
+
+    for (let i = 0; i < day; i++){
+        tbl += '<td>+++</td>';
+    }
+
+    tbl += '</tr></table'
+    calend.innerHTML = tbl
+
+
+</script>
+
+
+ </body>
+
+</html>
